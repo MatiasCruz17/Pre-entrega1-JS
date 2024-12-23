@@ -1,20 +1,15 @@
-/*Estructura HTML del proyecto. 
-Variables de JS necesarias. 
-Funciones esenciales del proceso a simular.
-Objetos de JS.
-Arrays.
-Métodos de búsqueda y filtrado sobre el Array.*/
+//Practica funciones de Orden superior
 
-
-const identidad = {
-    nombre : prompt("Ingrese su nombre"),
-    apellido : prompt("Ingrese su apellido"),
-    edad : prompt("Ingrese su edad"),
-    dni : prompt("Ingrese su DNI"),
-    Cursos : JavaScript, php, python, MySql,
-    /*Algo estoy haciendo mal*/
-    Seleccion : function (JavaScript) {
-        return "Este es el Curso de JavaScript"
+function asignarOperacion(op) {
+    if (op == "sumar"){
+        return (a, b) => a + b
+    } else if (op == "restar"){
+        return (a, b) => a - b
     }
 }
-alert("Inscribete " + identidad);
+
+let suma = asignarOperacion("sumar")
+let resta = asignarOperacion("restar")
+
+console.log (suma(4, 6))
+console.log (resta(5, 3))
