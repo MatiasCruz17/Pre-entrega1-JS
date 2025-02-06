@@ -5,7 +5,10 @@ const form = document.getElementById('registroForm');
 const message = document.getElementById('mensaje');
 
 form.addEventListener('submit', function (event) {
-    event.preventDefault(); // Evita el envío automático del formulario
+    event.preventDefault();
+
+    window.location.href = "Page/Opciones.html";
+
 
     const name = document.getElementById('nombre').value;
     const email = document.getElementById('email').value;
@@ -27,14 +30,16 @@ form.addEventListener('submit', function (event) {
         message.textContent = 'Please, complete all fields.';
     }
 });
-debugger
-// Cargamos datos del localStorage al iniciar
 document.addEventListener('DOMContentLoaded', function () {
-    const userSaved = localStorage.getItem('usuario');
+    const userSaved = localStorage.getItem('user');
     if (userSaved) {
         const user = JSON.parse(userSaved);
-
-        // Mostramos un mensaje indicando que ya hay un usuario registrado
-        mensaje.textContent = `Bienvenido de nuevo, ${user.name}.`;
+        message.textContent = `Welcome back, ${user.name}.`;
     }
+    Swal.fire({
+        title: 'Bienvenido a mi primer proyecto de JS',
+        text: 'preciona el boton para continuar',
+        icon: 'success',
+        confirmButtonText: 'Continuar'
+    })
 });

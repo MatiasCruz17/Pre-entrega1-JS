@@ -1,4 +1,4 @@
-/*ESTILOS DEL INDEX*/
+/*ESTILOS DE OPCIONES*/
 .button-container {
     font-family: Arial, sans-serif;
     background-color: #efefef;
@@ -37,7 +37,14 @@
 .ancor-registro{
     color: inherit;
     display: inline-block;
-    
+}
+
+.btn-back{
+    background-color: rgb(151, 3, 3);
+}
+
+.btn-back:hover {
+    background-color: rgb(65, 0, 0);
 }
 
 
@@ -199,7 +206,7 @@ body {
     text-align: center;
 }
 
-h1 {
+h2 {
     margin-bottom: 20px;
     color: #333;
 }
